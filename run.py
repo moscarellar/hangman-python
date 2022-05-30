@@ -5,6 +5,8 @@ def define_word():
     word = random.choice(words)
     return word.upper()
 
+word = define_word()
+
 
 
 def hangman_image(error):
@@ -58,7 +60,7 @@ def wordPrintUpdate(lettersGuessed):
     rightLetters=0
     for char in word:
         if(char in lettersGuessed):
-            print(randomWord[times], end=" ")
+            print(word[times], end=" ")
             rightLetters+=1
         else:
             print("_", end=" ")
@@ -77,7 +79,7 @@ def hangman(word):
     print(complete_word)
     print("\n")
     while(error != 6 and not discovered):
-        interaction = input("Guess a letter").upper()
+        interaction = input("Guess a letter: ").upper()
         if len(interaction) == 1 and interaction.isalpha():
             if interaction in letters_guessed:
                 print("You already guessed the letter", interaction)
@@ -94,10 +96,8 @@ def hangman(word):
 
 
 def game():
-    word = define_word()
     hangman(word)
     while input("Play Again? (Y/N) ").upper() == "Y":
-        word = define_word
         hangman(word)
 
 game()

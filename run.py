@@ -1,6 +1,7 @@
 import random
-from words import words
+from word_listing import words
 
 def define_word():
     word = random.choice(words)
-    return words.upper()
+    return word.upper()
+

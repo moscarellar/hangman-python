@@ -2,20 +2,12 @@ import random
 from word_listing import words
 
 def define_word():
-     """
-    Gets word from word_listing 
-    and returns it upper case
-    """
     word = random.choice(words)
     return word.upper()
 
 
 
 def hangman_image(error):
-    """
-    If/elif to
-    Prints image based on error count
-    """
     if (error == 0):
         print("\n+---+")
         print("    |")
@@ -41,7 +33,7 @@ def hangman_image(error):
         print("    |")
         print("   ===")
     elif (error == 4):
-         print("\n+---+")
+        print("\n+---+")
         print(" O  |")
         print("/|\ |")
         print("    |")
@@ -78,6 +70,7 @@ def hangman(word):
     complete_word = "_" * len(word)
     letters_guessed = []
     error = 0
+    current_letters_right = 0
     discovered = False
     print("Welcome to Hangman!")
     print(hangman_image(error))
@@ -85,15 +78,31 @@ def hangman(word):
     print("\n")
     while(error != 6 and not discovered):
         interaction = input("Guess a letter").upper()
-        if len(interaction) == 1 and human.isalpha():
+        if len(interaction) == 1 and interaction.isalpha():
             if interaction in letters_guessed:
                 print("You already guessed the letter", interaction)
             elif interaction not in word:
                 print(interaction, "is not in the word.")
                 error += 1
                 letters_guessed.append(interaction)
+                print_hangman(amount_of_times_wrong)
+                ### Print word
+                current_letters_right = printWord(current_letters_guessed)
             else:
                 print("Well done,", interaction, "is in the word!")
-               letters_guessed.append(interaction)
-               wordPrintUpdate(letters_guessed)
+                letters_guessed.append(interaction)
+                wordPrintUpdate(letters_guessed)
+    else:
+        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
+        print(hangman_image(error))
+        wordPrintUpdate(letters_guessed)
+        print("\n")
 
+def game():
+    word = define_word()
+    hangman(word)
+    while input("Play Again? (Y/N) ").upper() == "Y":
+        word = define_word
+        hangman(word)
+
+game()

@@ -76,7 +76,24 @@ def wordPrintUpdate(lettersGuessed):
 
 def hangman(word):
     complete_word = "_" * len(word)
-    lettersGuessed = []
+    letters_guessed = []
     error = 0
+    discovered = False
     print("Welcome to Hangman!")
     print(hangman_image(error))
+    print(complete_word)
+    print("\n")
+    while(error != 6 and not discovered):
+        interaction = input("Guess a letter").upper()
+        if len(interaction) == 1 and human.isalpha():
+            if interaction in letters_guessed:
+                print("You already guessed the letter", interaction)
+            elif interaction not in word:
+                print(interaction, "is not in the word.")
+                error += 1
+                letters_guessed.append(interaction)
+            else:
+                print("Well done,", interaction, "is in the word!")
+               letters_guessed.append(interaction)
+               wordPrintUpdate(letters_guessed)
+

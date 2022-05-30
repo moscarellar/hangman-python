@@ -85,18 +85,13 @@ def hangman(word):
                 print(interaction, "is not in the word.")
                 error += 1
                 letters_guessed.append(interaction)
-                print_hangman(amount_of_times_wrong)
-                ### Print word
-                current_letters_right = printWord(current_letters_guessed)
+                hangman_image(error)
+                current_letters_right = wordPrintUpdate(letters_guessed)
             else:
                 print("Well done,", interaction, "is in the word!")
                 letters_guessed.append(interaction)
                 wordPrintUpdate(letters_guessed)
-    else:
-        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
-        print(hangman_image(error))
-        wordPrintUpdate(letters_guessed)
-        print("\n")
+
 
 def game():
     word = define_word()

@@ -88,11 +88,16 @@ def hangman(word):
                 error += 1
                 letters_guessed.append(interaction)
                 hangman_image(error)
-                current_letters_right = wordPrintUpdate(letters_guessed)
+                wordPrintUpdate(letters_guessed)
             else:
                 print("Well done,", interaction, "is in the word!")
                 letters_guessed.append(interaction)
-                wordPrintUpdate(letters_guessed)
+                
+                indexed_word = list(complete_word)
+                indexes = [i for i, letter in enumerate(word) if letter == interaction]
+                for index in indexes:
+                    indexed_word [index] = guess
+                complete_word = "".join(indexed_word)
 
 
 def game():

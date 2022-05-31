@@ -55,24 +55,12 @@ def hangman_image(error):
 
 
 ### Def that will update word and print it
-def wordPrintUpdate(lettersGuessed):
-    times=0
-    rightLetters=0
-    for char in word:
-        if(char in lettersGuessed):
-            print(word[times], end=" ")
-            rightLetters+=1
-        else:
-            print("_", end=" ")
-            times+=1
-    return rightLetters
 
 
 def hangman(word):
     complete_word = "_" * len(word)
     letters_guessed = []
     error = 0
-    current_letters_right = 0
     discovered = False
     print("Welcome to Hangman!")
     print(hangman_image(error))
@@ -88,16 +76,27 @@ def hangman(word):
                 error += 1
                 letters_guessed.append(interaction)
                 hangman_image(error)
-                wordPrintUpdate(letters_guessed)
             else:
                 print("Well done,", interaction, "is in the word!")
                 letters_guessed.append(interaction)
-                
                 indexed_word = list(complete_word)
                 indexes = [i for i, letter in enumerate(word) if letter == interaction]
                 for index in indexes:
-                    indexed_word [index] = guess
+                    indexed_word [index] = interaction
                 complete_word = "".join(indexed_word)
+                if "_" not in complete_word:
+                    discovered = True
+        hangman_image(error)
+        print(complete_word)
+        print("\n")
+    if discovered:
+        print("Well done")
+    else:
+        print("Game over. Word was " + word + ".")
+        
+
+
+
 
 
 def game():

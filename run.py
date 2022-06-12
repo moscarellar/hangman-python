@@ -1,12 +1,11 @@
 import random
 from word_listing import words
 
-def define_word():
+def generate_new_word():
     word = random.choice(words)
     return word.upper()
 
-word = define_word()
-
+word = generate_new_word()
 
 
 def hangman_image(error):
@@ -60,6 +59,7 @@ def hangman_image(error):
 def hangman(word):
     complete_word = "_" * len(word)
     letters_guessed = []
+    words_guessed = []
     error = 0
     discovered = False
     print("Welcome to Hangman!")
@@ -86,6 +86,18 @@ def hangman(word):
                 complete_word = "".join(indexed_word)
                 if "_" not in complete_word:
                     discovered = True
+        elif len(interaction) == len(word) and interaction.isalpha():
+            if interaction in words_guessed:
+                print("You have guessed his word already, ", word)
+            elif interaction != word:
+                print(ineraction, " is not the word")
+                error += 1
+                words_guessed.append(interaction)
+            else:
+                interaction = True
+                complete_word = word
+
+
         hangman_image(error)
         print(complete_word)
         print("\n")
@@ -101,7 +113,6 @@ def hangman(word):
 
 def game():
     hangman(word)
-    while input("Play Again? (Y/N) ").upper() == "Y":
-        hangman(word)
+    
 
 game()

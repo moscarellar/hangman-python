@@ -98,7 +98,6 @@ def hangman(word):
                 complete_word = word
         else:
             print("Wrong guess")
-        def hangman_image(error)
         print(complete_word)
         print("\n")
     if discovered:

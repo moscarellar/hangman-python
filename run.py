@@ -5,8 +5,6 @@ def generate_new_word():
     word = random.choice(words)
     return word.upper()
 
-word = generate_new_word()
-
 
 def hangman_image(error):
     if (error == 0):
@@ -59,7 +57,6 @@ def hangman_image(error):
 def hangman(word):
     complete_word = "_" * len(word)
     letters_guessed = []
-    words_guessed = []
     error = 0
     discovered = False
     print("Welcome to Hangman!")
@@ -86,32 +83,21 @@ def hangman(word):
                 complete_word = "".join(indexed_word)
                 if "_" not in complete_word:
                     discovered = True
-        elif len(interaction) == len(word) and interaction.isalpha():
-            if interaction in words_guessed:
-                print("You have guessed his word already, ", word)
-            elif interaction != word:
-                print(ineraction, " is not the word")
-                error += 1
-                words_guessed.append(interaction)
-            else:
-                interaction = True
-                complete_word = word
         else:
-            print("Wrong guess")
+            print("Wrong guess, please type only one letter")
         print(complete_word)
         print("\n")
     if discovered:
         print("Well done")
     else:
         print("Game over. Word was " + word + ".")
-        
-
-
-
 
 
 def game():
+    word = generate_new_word()
     hangman(word)
-    
+    while input("Play Again? ( yes / no ) ") == "yes":
+        word = generate_new_word()
+        hangman(word)
 
 game()

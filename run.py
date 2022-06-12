@@ -96,9 +96,9 @@ def hangman(word):
             else:
                 interaction = True
                 complete_word = word
-
-
-        hangman_image(error)
+        else:
+            print("Wrong guess")
+        def hangman_image(error)
         print(complete_word)
         print("\n")
     if discovered:

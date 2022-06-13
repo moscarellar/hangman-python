@@ -12,6 +12,11 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
+gb = SHEET.worksheet('guestbookworksheet')
+data = gb.get_all_values()
+
+print(data)
+
 import random
 from word_listing import words
 

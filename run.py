@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import datetime
+import time
+from datetime import date
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -21,11 +22,13 @@ gb = SHEET.worksheet('guestbookworksheet')
 '''
 
 def get_user_data():
+    t= time.localtime()
+    current_time= time.strftime("%d/%m/%Y")
     username = input("Type your username: ")
     city = input("From what city are you playing?")
     print("Now we got your username and city...")
     gb = SHEET.worksheet('guestbookworksheet')
-    gb.append_row([str(username), (city)])
+    gb.append_row([str(username), (city), (current_time)])
     print("We are ready to challenge The Hangman.")
 
 
@@ -125,13 +128,12 @@ def hangman(word):
 
 
 def game():
+    get_user_data()
     word = generate_new_word()
     hangman(word)
     while input("Play Again? ( yes / no ) ") == "yes":
         word = generate_new_word()
         hangman(word)
-'''
-game()
-'''
 
-get_user_data()
+game()
+

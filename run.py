@@ -14,13 +14,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
-
-'''
-gb = SHEET.worksheet('guestbookworksheet')
-
- data = gb.get_all_values()
-'''
-
 def get_user_data():
     t= time.localtime()
     current_time= time.strftime("%d/%m/%Y")

@@ -12,15 +12,21 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
+
+'''
 gb = SHEET.worksheet('guestbookworksheet')
-data = gb.get_all_values()
 
-def get_username
-    username = input("Type an username: ")
+ data = gb.get_all_values()
+'''
 
+def get_user_data():
+    username = input("Type your username: ")
+    city = input("From what city are you playing?")
+    print("Now we got your username and city...")
+    gb = SHEET.worksheet('guestbookworksheet')
+    gb.append_row([str(username), (city)])
+    print("We are ready to challenge The Hangman.")
 
-
-print(data)
 
 import random
 from word_listing import words
@@ -123,5 +129,8 @@ def game():
     while input("Play Again? ( yes / no ) ") == "yes":
         word = generate_new_word()
         hangman(word)
-
+'''
 game()
+'''
+
+get_user_data()

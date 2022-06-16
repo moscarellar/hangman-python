@@ -15,6 +15,11 @@ SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 gb = SHEET.worksheet('guestbookworksheet')
 data = gb.get_all_values()
 
+def get_username
+    username = input("Type an username: ")
+
+
+
 print(data)
 
 import random

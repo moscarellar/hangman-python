@@ -177,6 +177,12 @@ This application has been deployed from GitHub to Heroku by following the steps:
  
 [Back to Table Of Content](#table-of-content)
 
+## Acknowledgements
+I would like to thank everyone who supported me in the development of this project:
+-
+-
+- Code Institute community on Slack for resources and support
 
+[Back to Table Of Content](#table-of-content)
 
 

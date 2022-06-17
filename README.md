@@ -61,7 +61,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 [Back to Table Of Content](#table-of-content)
 
 ## Technologies
- 
+
 ### Languages
 - Python, language used to develop the app.
  
@@ -77,3 +77,71 @@ This diagram shows the structure and flow of the game logic within the applicati
  - Imported these libraries: 1. random 2. gspread 3. Credentials 4. time and 5. from datetime import date
 
  [Back to table](#table-of-content)
+
+## Features
+ 
+### Intro Message
+ 
+![Logo and Intro Message](./assets/images/readme/hangman-feature-1.jpg)
+ 
+* When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
+
+### Logo 
+ 
+### Username
+- Asks the player for their username.
+- Asks the player for their city.
+- Updates row (append) with input information.
+ 
+<details>
+<summary>Username and city asked</summary>
+ 
+
+### Guestbook
+![Leaderboard](guestbook.png)
+* The Leaderboard shows the 15 players with the best scores.
+ 
+<details>
+<summary>Player Database Screenshot</summary>
+ 
+![Player Database](documentation/guestbook.png)
+</details>
+ 
+
+ 
+### Game
+- Displays the title created for the game.
+- Displays the numbers of lives remaining for the player.
+- Displays the Letters that have already been used within this game.
+- Displays the status of the gallows and the man getting hung.
+- Displays the status of the word being guessed.
+- Displays a warning when an invalid character is entered.
+- Tells the player when the enter a letter that is not in the word.
+- Provides feedback when the game has been won.
+- Gives the option to play again and prints the users total when the next game starts.
+- User stories covered: 1, 5, 6, 7, 8, 12, 13
+ 
+ 
+
+ 
+### Hangman Stage 1
+![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
+ 
+This feature displays where the main scene happens. Here the user can play and see the following information about the game:
+* Numbers of letters chosen by the computer
+* Hangman stages
+* Letters guessed right
+* Letters guessed wrong
+* Current score
+* Current number of attempts
+* Input to guess a letter or a full word
+* Input letters to either guess a letter only or the full word
+ 
+<details>
+<summary>Game Screenshot</summary>
+ 
+![Game](documentation/hangmanstages.png)
+</details>
+<details>
+ 
+[Back](#table-of-content)

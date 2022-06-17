@@ -15,7 +15,7 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
 
 * [Design](#design)
         -  [Flow Diagram](#flow-diagram)
-* [Technologies Used](#technologies-used)
+* [Technologies](#technologies)
         - [Languages](#languages)
         - [Frameworks and Tools](#frameworks-and-tools)
         - [Libraries](#libraries)
@@ -59,3 +59,15 @@ This diagram shows the structure and flow of the game logic within the applicati
 </details>
  
 [Back to Table Of Content](#table-of-content)
+
+## Technologies
+ 
+### Languages
+- Python, language used to develop the app.
+ 
+### Frameworks and Tools
+- [Diagrams.net](https://app.diagrams.net/) use for creation of diagram.
+- [GitHub](https://github.com/) used as recommended to store and backup projects and code as repository.
+- [Google APIs](https://cloud.google.com/cloud-console/) used to acess spreadsheets and create credentials.
+- [Google Sheets](https://www.google.co.uk/sheets/about/) speadsheets used to store information of guestbook.
+- [Heroku Platform](https://dashboard.heroku.com/) used to deploy project.

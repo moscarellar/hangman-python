@@ -15,14 +15,16 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
 def get_user_data():
+    print("Welcome... ")
+    print("Before starting provide some info...  ")
     t= time.localtime()
     current_time= time.strftime("%d/%m/%Y")
-    username = input("Type your username: ")
-    city = input("From what city are you playing?")
-    print("Now we got your username and city...")
+    username = input("Type your username:  ")
+    city = input("From what city are you playing?  ")
+    print("Now we got your username and city...  ")
     gb = SHEET.worksheet('guestbookworksheet')
     gb.append_row([str(username), (city), (current_time)])
-    print("We are ready to challenge The Hangman.")
+    print("We are ready to challenge...")
 
 
 import random
@@ -77,6 +79,16 @@ def hangman_image(error):
         print("/ \  |")
         print("    ===")
 
+def game_effect():
+    print("""
+    #     #       #       #     #    ###      #       #       #       #     #
+    #     #      # #      ##    #  ##   ##    ##     ##      # #      ##    #
+    #     #     #   #     # #   # #           # #   # #     #   #     # #   #
+    #######    #######    #  #  # #     ##### #  # #  #    #######    #  #  #
+    #     #   #       #   #   # # #       #   #   #   #   #       #   #   # #
+    #     #  #         #  #    ##  ##   ##    #       #  #         #  #    ##
+    #     # #           # #     #    ###      #       # #           # #     #
+    """)
 
 ### Def that will update word and print it
 
@@ -122,9 +134,11 @@ def hangman(word):
 
 def game():
     get_user_data()
+    game_effect()
     word = generate_new_word()
     hangman(word)
     while input("Play Again? ( yes / no ) ") == "yes":
+        game_effect()
         word = generate_new_word()
         hangman(word)
 

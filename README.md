@@ -72,3 +72,8 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [Google Sheets](https://www.google.co.uk/sheets/about/) speadsheets used to store information of guestbook.
 - [Heroku Platform](https://dashboard.heroku.com/) used to deploy project.
  
+ ### Libraries
+
+ - Imported these libraries: 1. random 2. gspread 3. Credentials 4. time and 5. from datetime import date
+
+ [Back to table](#table-of-content)

@@ -34,3 +34,28 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [Acknowledgements](#acknowledgements)
+
+
+## User Experience
+ 
+### User Stories
+ 
+* As a first time user, I want to understand the display easily.
+* As a first time user, I want to receive clear instructions.
+* As a game user, I want to relate with the game I already know as hangman.
+* As a game user, I want a simple game and easy to follow and understand.
+ 
+### Site Owner Stories
+ 
+The purpose of the site is to create a minimalistic app so Users can play easily.
+ 
+## Design
+ 
+### Flow Diagram
+This diagram shows the structure and flow of the game logic within the application.
+ 
+<details><summary>Diagram</summary>
+<img src="documentation/diagram.png">
+</details>
+ 
+[Back to Table Of Content](#table-of-content)

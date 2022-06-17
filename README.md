@@ -71,3 +71,4 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [Google APIs](https://cloud.google.com/cloud-console/) used to acess spreadsheets and create credentials.
 - [Google Sheets](https://www.google.co.uk/sheets/about/) speadsheets used to store information of guestbook.
 - [Heroku Platform](https://dashboard.heroku.com/) used to deploy project.
+ 

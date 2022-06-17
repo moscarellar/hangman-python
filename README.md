@@ -145,3 +145,19 @@ This feature displays where the main scene happens. Here the user can play and s
 <details>
  
 [Back](#table-of-content)
+
+## Testing
+
+### Manual Testing
+After testing user stories, I went ahead to run the program several times and asked close people to play it as well.
+
+### Validator
+ 
+The [PEP8](http://pep8online.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+ 
+![PEP8](/hangman-pep8-results.png)
+* No errors or warnings were found during the testing of the code in PEP8
+
+
+
+

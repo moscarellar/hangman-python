@@ -158,6 +158,17 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 ![PEP8](/hangman-pep8-results.png)
 * No errors or warnings were found during the testing of the code in PEP8
 
+## Bugs
+ 
+debug
+printint 2 times hanman image
+deleted it from line 101 of code, it was repeated
+ 
+issues with position of variable word
+trying several times
+ 
+[Back](#table-of-content)
+
 
 
 

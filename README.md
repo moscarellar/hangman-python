@@ -169,6 +169,14 @@ trying several times
  
 [Back](#table-of-content)
 
+## Deployment
+ 
+### Heroku
+This application has been deployed from GitHub to Heroku by following the steps:
+ 
+ 
+[Back to Table Of Content](#table-of-content)
+
 
 
 

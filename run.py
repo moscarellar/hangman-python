@@ -18,6 +18,10 @@ SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
 
 def get_user_data():
+    """
+    Gets user data (city and username).
+    Appends user data to google spreadsheet.
+    """
     print("Welcome... ")
     print("Before starting provide some info...  ")
     t = time.localtime()
@@ -31,11 +35,17 @@ def get_user_data():
 
 
 def generate_new_word():
+    """
+    Generates new world after each round
+    """
     word = random.choice(words)
     return word.upper()
 
 
 def hangman_image(error):
+    """
+    Generates image of hangman after each wrong guess
+    """
     if (error == 0):
         print("\n+---+")
         print("    |")
@@ -81,6 +91,9 @@ def hangman_image(error):
 
 
 def logo():
+    """
+    Prints logo
+    """
     print("""
     $     $       $       $     $    $$$      $       $       $       $     $
     $     $      $ $      $$    $  $$   $$    $$     $$      $ $      $$    $
@@ -93,6 +106,9 @@ def logo():
 
 
 def hangman(word):
+    """
+    Logic of hangman game
+    """
     complete_word = "_" * len(word)
     letters_guessed = []
     error = 0
@@ -132,6 +148,9 @@ def hangman(word):
 
 
 def game():
+    """
+    Triggers game
+    """
     get_user_data()
     logo()
     word = generate_new_word()

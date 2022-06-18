@@ -26,8 +26,8 @@ def get_user_data():
     print("Before starting provide some info...  ")
     t = time.localtime()
     current_time = time.strftime("%d/%m/%Y")
-    username = input("Type your username:  ")
-    city = input("From what city are you playing?  ")
+    username = input("Type your username:  \n")
+    city = input("From what city are you playing?  \n")
     print("Now we got your username and city...  ")
     gb = SHEET.worksheet('guestbookworksheet')
     gb.append_row([str(username), (city), (current_time)])
@@ -118,7 +118,7 @@ def hangman(word):
     print(complete_word)
     print("\n")
     while(error != 6 and not discovered):
-        interaction = input("Guess a letter: ").upper()
+        interaction = input("Guess a letter: \n").upper()
         if len(interaction) == 1 and interaction.isalpha():
             if interaction in letters_guessed:
                 print("You already guessed the letter", interaction)
@@ -155,7 +155,7 @@ def game():
     logo()
     word = generate_new_word()
     hangman(word)
-    while input("Play Again? ( yes / no ) ") == "yes":
+    while input("Play Again? ( yes / no ) \n") == "yes":
         logo()
         word = generate_new_word()
         hangman(word)

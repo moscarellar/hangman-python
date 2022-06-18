@@ -22,7 +22,7 @@ def get_user_data():
     Gets user data (city and username).
     Appends user data to google spreadsheet.
     """
-    print("Welcome... ")
+    print("Welcome to The Hangman... ")
     print("Before starting provide some info...  ")
     t = time.localtime()
     current_time = time.strftime("%d/%m/%Y")

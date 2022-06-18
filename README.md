@@ -34,8 +34,10 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
  
 * As a first time user, I want to understand the display easily.
 * As a first time user, I want to receive clear instructions.
-* As a game user, I want to relate with the game I already know as hangman.
-* As a game user, I want a simple game and easy to follow and understand.
+* As a first time user, I want to relate with the game I already know as hangman.
+* As a first time user, I want a simple game and easy to follow and understand.
+* As a game user, I want a simple game and easy to come back to.
+
  
 ### Site Owner Stories
  
@@ -65,10 +67,7 @@ Please find screenshot of my diagram.
 - Google APIs used to acess spreadsheets and create credentials.
 - Google Sheets used to store information of guestbook.
 - Heroku Platform used to deploy project.
-
-### Libraries
-
- - Imported these libraries: 1. random 2. gspread 3. Credentials 4. time and 5. from datetime import date
+- Imported these libraries: 1. random 2. gspread 3. Credentials 4. time and 5. from datetime import date
 
 [Back](#table-of-content)
 
@@ -117,7 +116,6 @@ The PEP8 used as validator.
 ## Bugs
 Main bugs issues were around where to declare variables.
 After a few times I decided to declare word inside the game function.
-
 
 Had a similar issue with the hangman image, as it displayed 2 times after each wrong guess. 
 

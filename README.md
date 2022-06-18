@@ -14,25 +14,17 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
 * [User Experience](#user-experience)
 
 * [Design](#design)
-        -  [Flow Diagram](#flow-diagram)
+       
 * [Technologies](#technologies)
-        - [Languages](#languages)
-        - [Frameworks and Tools](#frameworks-and-tools)
-        - [Libraries](#libraries)
+    
 * [Features](#features)
-        - [User Login](#user-login)
-        - [User Sign Up](#user-sign-up)
-        - [How To Play](#how-to-play)
-        - [Game Options](#game-options)
-        - [Welcome Message](#welcome-message)
-        - [Game](#game)
+   
 * [Validation](#validation)
+
 * [Testing](#testing)
-        - [Manual Testing](#manual-testing)
-        - [Automated testing](#automated-testing)
+
 * [Bugs](#bugs)
-* [Deployment](#deployment)
-* [Credits](#credits)
+
 * [Acknowledgements](#acknowledgements)
 
 
@@ -48,7 +40,9 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
 ### Site Owner Stories
  
 The purpose of the site is to create a minimalistic app so users can play easily.
- 
+
+[Back](#table-of-content)
+
 ## Design
  
 ### Flow Diagram
@@ -58,7 +52,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 <img src="doc/diagram.png">
 </details>
  
-[Back to Table Of Content](#table-of-content)
+[Back](#table-of-content)
 
 ## Technologies
 
@@ -71,12 +65,12 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [Google APIs](https://cloud.google.com/cloud-console/) used to acess spreadsheets and create credentials.
 - [Google Sheets](https://www.google.co.uk/sheets/about/) speadsheets used to store information of guestbook.
 - [Heroku Platform](https://dashboard.heroku.com/) used to deploy project.
- 
- ### Libraries
+
+### Libraries
 
  - Imported these libraries: 1. random 2. gspread 3. Credentials 4. time and 5. from datetime import date
 
- [Back to table](#table-of-content)
+[Back](#table-of-content)
 
 ## Features
  
@@ -111,38 +105,30 @@ This diagram shows the structure and flow of the game logic within the applicati
 After testing user stories, I went ahead to run the program several times and asked close people to play it as well.
 App runs with no issues.
 
-### Validator
+### Validation
  
 The [PEP8](http://pep8online.com/)used as validator.
  
 ![PEP8](/doc/validator.png)
 * No errors.
 
+[Back](#table-of-content)
+
 ## Bugs
- 
-debug
-printint 2 times hanman image
-deleted it from line 101 of code, it was repeated
- 
-issues with position of variable word
-trying several times
+Main bugs issues were around where to declare variables.
+After a few times I decided to declare word inside the game function.
+
+
+Had a similar issue with the hangman image, as it displayed 2 times after each wrong guess. 
+
+Other than this I had no major bugs.
  
 [Back](#table-of-content)
 
-## Deployment
- 
-### Heroku
-This application has been deployed from GitHub to Heroku by following the steps:
- 
- 
-[Back to Table Of Content](#table-of-content)
-
 ## Acknowledgements
-I would like to thank everyone who supported me in the development of this project:
--
--
-- Code Institute community on Slack for resources and support
+Love Sanwiches project structure and logic was my major reference.
+I watched a big amount of tutorials to came up with my own version of hangman.
+Slack community was very important to develop this project.
+Thanks to all my friends who helped me test the game.
 
-[Back to Table Of Content](#table-of-content)
-
-
+[Back](#table-of-content)

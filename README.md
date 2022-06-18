@@ -49,7 +49,8 @@ The purpose of the site is to create a minimalistic app so users can play easily
 This diagram shows the structure and flow of the game logic within the application.
  
 <details><summary>Diagram</summary>
-<img src="doc/diagram.png">
+<img src="doc/diagram2.jpg">
+<img src="doc/diagram1.jpg">
 </details>
  
 [Back](#table-of-content)

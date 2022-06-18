@@ -47,7 +47,7 @@ This is project milestone 3 of Code Institute program. I decided to develop a ga
  
 ### Site Owner Stories
  
-The purpose of the site is to create a minimalistic app so Users can play easily.
+The purpose of the site is to create a minimalistic app so users can play easily.
  
 ## Design
  
@@ -55,7 +55,7 @@ The purpose of the site is to create a minimalistic app so Users can play easily
 This diagram shows the structure and flow of the game logic within the application.
  
 <details><summary>Diagram</summary>
-<img src="documentation/diagram.png">
+<img src="doc/diagram.png">
 </details>
  
 [Back to Table Of Content](#table-of-content)
@@ -80,69 +80,28 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 ## Features
  
-### Intro Message
+### Logo and Intro Message
  
-![Logo and Intro Message](./assets/images/readme/hangman-feature-1.jpg)
+![Logo and Intro Message](doc/logo.png)
  
-* When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
+* When the users reach the website, they will see this message and the logo. User receive clear instructions.<br>
 
-### Logo 
- 
 ### Username
 - Asks the player for their username.
 - Asks the player for their city.
 - Updates row (append) with input information.
  
-<details>
-<summary>Username and city asked</summary>
- 
-
 ### Guestbook
-![Leaderboard](guestbook.png)
-* The Leaderboard shows the 15 players with the best scores.
- 
-<details>
-<summary>Player Database Screenshot</summary>
- 
-![Player Database](documentation/guestbook.png)
-</details>
- 
-
+![Guestbook](doc/guestbook.png)
+* The guestbook uses city and username input and append a row with the date.
  
 ### Game
-- Displays the title created for the game.
-- Displays the numbers of lives remaining for the player.
-- Displays the Letters that have already been used within this game.
-- Displays the status of the gallows and the man getting hung.
-- Displays the status of the word being guessed.
-- Displays a warning when an invalid character is entered.
-- Tells the player when the enter a letter that is not in the word.
-- Provides feedback when the game has been won.
-- Gives the option to play again and prints the users total when the next game starts.
-- User stories covered: 1, 5, 6, 7, 8, 12, 13
- 
- 
+- After logo is displayed, a welcome message appears.
 
- 
-### Hangman Stage 1
-![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
- 
-This feature displays where the main scene happens. Here the user can play and see the following information about the game:
-* Numbers of letters chosen by the computer
-* Hangman stages
-* Letters guessed right
-* Letters guessed wrong
-* Current score
-* Current number of attempts
-* Input to guess a letter or a full word
-* Input letters to either guess a letter only or the full word
- 
-<details>
-<summary>Game Screenshot</summary>
- 
-![Game](documentation/hangmanstages.png)
-</details>
-<details>
+![Welcome](doc/welcometo.png)
+- Displays if letter was already guessed.
+- Displays right guess letters.
+- Displays image of hangman and its progression.
  
 [Back](#table-of-content)
 
@@ -150,13 +109,14 @@ This feature displays where the main scene happens. Here the user can play and s
 
 ### Manual Testing
 After testing user stories, I went ahead to run the program several times and asked close people to play it as well.
+App runs with no issues.
 
 ### Validator
  
-The [PEP8](http://pep8online.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+The [PEP8](http://pep8online.com/)used as validator.
  
-![PEP8](/hangman-pep8-results.png)
-* No errors or warnings were found during the testing of the code in PEP8
+![PEP8](/doc/validator.png)
+* No errors.
 
 ## Bugs
  

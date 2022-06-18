@@ -1,8 +1,9 @@
-import random
 import gspread
 from google.oauth2.service_account import Credentials
 import time
 from datetime import date
+import random
+from word_listing import words
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -15,11 +16,12 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('guestbook_hangman')
 
+
 def get_user_data():
     print("Welcome... ")
     print("Before starting provide some info...  ")
-    t= time.localtime()
-    current_time= time.strftime("%d/%m/%Y")
+    t = time.localtime()
+    current_time = time.strftime("%d/%m/%Y")
     username = input("Type your username:  ")
     city = input("From what city are you playing?  ")
     print("Now we got your username and city...  ")
@@ -27,9 +29,6 @@ def get_user_data():
     gb.append_row([str(username), (city), (current_time)])
     print("We are ready to challenge...")
 
-
-import random
-from word_listing import words
 
 def generate_new_word():
     word = random.choice(words)
@@ -80,18 +79,17 @@ def hangman_image(error):
         print("/ \  |")
         print("    ===")
 
-def game_effect():
-    print("""
-    #     #       #       #     #    ###      #       #       #       #     #
-    #     #      # #      ##    #  ##   ##    ##     ##      # #      ##    #
-    #     #     #   #     # #   # #           # #   # #     #   #     # #   #
-    #######    #######    #  #  # #     ##### #  # #  #    #######    #  #  #
-    #     #   #       #   #   # # #       #   #   #   #   #       #   #   # #
-    #     #  #         #  #    ##  ##   ##    #       #  #         #  #    ##
-    #     # #           # #     #    ###      #       # #           # #     #
-    """)
 
-### Def that will update word and print it
+def logo():
+    print("""
+    $     $       $       $     $    $$$      $       $       $       $     $
+    $     $      $ $      $$    $  $$   $$    $$     $$      $ $      $$    $
+    $     $     $   $     $ $   $ $           $ $   $ $     $   $     $ $   $
+    $#####$    #######    $  $  $ $     $$$$$ $  $ $  $    #######    $  $  $
+    $     $   $       $   $   $ $ $       $   $   $   $   $       $   $   $ $
+    $     $  $         $  $    $$  $$   $$    $       $  $         $  $    $$
+    $     $ $           $ $     $    $$$      $       $ $           $ $     $
+    """)
 
 
 def hangman(word):
@@ -119,7 +117,7 @@ def hangman(word):
                 indexed_word = list(complete_word)
                 indexes = [i for i, letter in enumerate(word) if letter == interaction]
                 for index in indexes:
-                    indexed_word [index] = interaction
+                    indexed_word[index] = interaction
                 complete_word = "".join(indexed_word)
                 if "_" not in complete_word:
                     discovered = True
@@ -135,13 +133,12 @@ def hangman(word):
 
 def game():
     get_user_data()
-    game_effect()
+    logo()
     word = generate_new_word()
     hangman(word)
     while input("Play Again? ( yes / no ) ") == "yes":
-        game_effect()
+        logo()
         word = generate_new_word()
         hangman(word)
 
 game()
-

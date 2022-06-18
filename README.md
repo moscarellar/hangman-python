@@ -2,9 +2,9 @@
 
 Student: Raymundo Castillo Moscarella
 
-![Mock-up image](doc/xxxx.png)
+![Mock-up image](doc/mockup.png)
 
- [Live webpage](https://.herokuapp.com)
+ [Live webpage](https://hangman-game-codeinstitute.herokuapp.com)
 
 ## Introduction
 

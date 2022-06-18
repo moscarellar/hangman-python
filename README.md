@@ -2,7 +2,7 @@
 
 Student: Raymundo Castillo Moscarella
 
-![Mock-up image](/doc/xxxx.png)
+![Mock-up image](doc/xxxx.png)
 
  [Live webpage](https://.herokuapp.com)
 
@@ -45,8 +45,8 @@ The purpose of the site is to create a minimalistic app so users can play easily
 
 ## Design
  
-### Flow Diagram
-This diagram shows the structure and flow of the game logic within the application.
+### Diagram
+Please find screenshot of my diagram.
  
 <details><summary>Diagram</summary>
 <img src="doc/diagram2.jpg">
@@ -60,12 +60,11 @@ This diagram shows the structure and flow of the game logic within the applicati
 ### Languages
 - Python, language used to develop the app.
  
-### Frameworks and Tools
-- [Diagrams.net](https://app.diagrams.net/) use for creation of diagram.
-- [GitHub](https://github.com/) used as recommended to store and backup projects and code as repository.
-- [Google APIs](https://cloud.google.com/cloud-console/) used to acess spreadsheets and create credentials.
-- [Google Sheets](https://www.google.co.uk/sheets/about/) speadsheets used to store information of guestbook.
-- [Heroku Platform](https://dashboard.heroku.com/) used to deploy project.
+### Resources
+- GitHub used as recommended to store and backup projects and code as repository.
+- Google APIs used to acess spreadsheets and create credentials.
+- Google Sheets used to store information of guestbook.
+- Heroku Platform used to deploy project.
 
 ### Libraries
 
@@ -108,9 +107,9 @@ App runs with no issues.
 
 ### Validation
  
-The [PEP8](http://pep8online.com/)used as validator.
+The PEP8 used as validator.
  
-![PEP8](/doc/validator.png)
+![PEP8](doc/validator.png)
 * No errors.
 
 [Back](#table-of-content)
